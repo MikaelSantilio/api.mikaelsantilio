@@ -1,5 +1,5 @@
 from django.db import models
-from sorl.thumbnail import ImageField
+# from sorl.thumbnail import ImageField
 
 
 class Base(models.Model):
@@ -12,7 +12,7 @@ class Base(models.Model):
 
 
 class Service(Base):
-    icon = ImageField(upload_to='services')
+    icon = models.ImageField(upload_to='services')
     title = models.CharField(max_length=18)
     description = models.CharField(max_length=116)
 
@@ -21,7 +21,7 @@ class Service(Base):
 
 
 class Project(Base):
-    thumb = ImageField(upload_to='projects')
+    thumb = models.ImageField(upload_to='projects')
     title = models.CharField(max_length=23)
     subtitle = models.CharField(max_length=32)
     description = models.CharField(max_length=116)
