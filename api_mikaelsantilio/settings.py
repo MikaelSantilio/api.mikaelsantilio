@@ -1,12 +1,13 @@
 import os
+import django_heroku
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.getenv('SECRET_KEY', default='adaljdladandaldnl124545adasdads')
 
-DEBUG = os.getenv('DEBUG_DJANGO', default=False)
+DEBUG = os.getenv('DEBUG_DJANGO') == True
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = ['https://api-mikaelsantilio.herokuapp.com/']
 
 
 # Application definition
@@ -131,3 +132,5 @@ REST_FRAMEWORK = {
 
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = tuple(os.getenv('CORS_ORIGIN_WHITELIST').split(','))
+
+django_heroku.settings(locals())
