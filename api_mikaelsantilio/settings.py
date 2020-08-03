@@ -5,7 +5,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.getenv('SECRET_KEY', default='adaljdladandaldnl124545adasdads')
 
-DEBUG = os.getenv('DEBUG_DJANGO') == True
+DEBUG = os.getenv('DEBUG_DJANGO')
 
 ALLOWED_HOSTS = ['https://api-mikaelsantilio.herokuapp.com/']
 
