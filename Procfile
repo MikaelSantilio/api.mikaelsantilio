@@ -1,1 +1,1 @@
-web: gunicorn api_mikaelsantilio.wsgi
+web: gunicorn api_mikaelsantilio.wsgi --log-file -
