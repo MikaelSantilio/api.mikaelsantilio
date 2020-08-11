@@ -30,8 +30,6 @@ class ServiceSerializer(serializers.ModelSerializer):
 
 class ProjectSerializer(serializers.ModelSerializer):
 
-    thumb = ThumbnailSerializer(alias='project')
-
     class Meta:
 
         model = Project
