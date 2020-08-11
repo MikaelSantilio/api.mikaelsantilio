@@ -3,7 +3,7 @@ from core.models import Service, Project
 from easy_thumbnails.templatetags.thumbnail import thumbnail_url
 
 
-class ThumbnailSerializer(serializers.ImageField):
+class ThumbnailSerializer(serializers.URLField):
     def __init__(self, alias, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.read_only = True
