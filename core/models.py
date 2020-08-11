@@ -12,7 +12,7 @@ class Base(models.Model):
 
 
 class Service(Base):
-    icon = models.ImageField(upload_to='services')
+    icon = models.URLField()
     title = models.CharField(max_length=18)
     description = models.CharField(max_length=116)
 
@@ -21,7 +21,7 @@ class Service(Base):
 
 
 class Project(Base):
-    thumb = models.ImageField(upload_to='projects')
+    thumb = models.URLField()
     title = models.CharField(max_length=23)
     subtitle = models.CharField(max_length=32)
     description = models.CharField(max_length=116)
